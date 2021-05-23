@@ -1,0 +1,6352 @@
+{
+	"info": {
+		"_postman_id": "cdb1703f-1bf7-49ea-bfb8-0d32ae8b80f7",
+		"name": "3commas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ver1",
+			"item": [
+				{
+					"name": "bots",
+					"item": [
+						{
+							"name": "{bot id}",
+							"item": [
+								{
+									"name": "patch Ver1Bots Bot Id Update",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/:bot_id/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												":bot_id",
+												"update"
+											],
+											"variable": [
+												{
+													"key": "bot_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Edit bot (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Edit bot (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": []
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/bots/:bot_id/update",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"bots",
+														":bot_id",
+														"update"
+													],
+													"variable": [
+														{
+															"key": "bot_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Bots Bot Id Disable",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/:bot_id/disable",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												":bot_id",
+												"disable"
+											],
+											"variable": [
+												{
+													"key": "bot_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Disable bot (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Disable bot (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/bots/:bot_id/disable",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"bots",
+														":bot_id",
+														"disable"
+													],
+													"variable": [
+														{
+															"key": "bot_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Bots Bot Id Enable",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/:bot_id/enable",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												":bot_id",
+												"enable"
+											],
+											"variable": [
+												{
+													"key": "bot_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Enable bot (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Enable bot (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/bots/:bot_id/enable",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"bots",
+														":bot_id",
+														"enable"
+													],
+													"variable": [
+														{
+															"key": "bot_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Bots Bot Id Start New Deal",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "pair",
+													"value": "voluptate",
+													"description": "Can be omited for simple bot"
+												},
+												{
+													"key": "skip_signal_checks",
+													"value": "false",
+													"description": "If false or not specified then all paramaters like signals or volume filters will be checked. If true - those checks will be skipped"
+												},
+												{
+													"key": "skip_open_deals_checks",
+													"value": "true",
+													"description": "If true then you will be allowed to open more then one deal per pair in composite bot"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/:bot_id/start_new_deal",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												":bot_id",
+												"start_new_deal"
+											],
+											"variable": [
+												{
+													"key": "bot_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Start new deal asap (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Start new deal asap (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "pair",
+															"value": "voluptate",
+															"description": "Can be omited for simple bot"
+														},
+														{
+															"key": "skip_signal_checks",
+															"value": "false",
+															"description": "If false or not specified then all paramaters like signals or volume filters will be checked. If true - those checks will be skipped"
+														},
+														{
+															"key": "skip_open_deals_checks",
+															"value": "true",
+															"description": "If true then you will be allowed to open more then one deal per pair in composite bot"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/bots/:bot_id/start_new_deal",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"bots",
+														":bot_id",
+														"start_new_deal"
+													],
+													"variable": [
+														{
+															"key": "bot_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Bots Bot Id Delete",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/:bot_id/delete",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												":bot_id",
+												"delete"
+											],
+											"variable": [
+												{
+													"key": "bot_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Delete bot (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Delete bot (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/bots/:bot_id/delete",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"bots",
+														":bot_id",
+														"delete"
+													],
+													"variable": [
+														{
+															"key": "bot_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Bots Bot Id Panic Sell All Deals",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/:bot_id/panic_sell_all_deals",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												":bot_id",
+												"panic_sell_all_deals"
+											],
+											"variable": [
+												{
+													"key": "bot_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Panic sell all bot deals (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Panic sell all bot deals (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/bots/:bot_id/panic_sell_all_deals",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"bots",
+														":bot_id",
+														"panic_sell_all_deals"
+													],
+													"variable": [
+														{
+															"key": "bot_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Bots Bot Id Cancel All Deals",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/:bot_id/cancel_all_deals",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												":bot_id",
+												"cancel_all_deals"
+											],
+											"variable": [
+												{
+													"key": "bot_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Cancel all bot deals (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Cancel all bot deals (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/bots/:bot_id/cancel_all_deals",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"bots",
+														":bot_id",
+														"cancel_all_deals"
+													],
+													"variable": [
+														{
+															"key": "bot_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "get Ver1Bots Bot Id Show",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/:bot_id/show?include_events=true",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												":bot_id",
+												"show"
+											],
+											"query": [
+												{
+													"key": "include_events",
+													"value": "true"
+												}
+											],
+											"variable": [
+												{
+													"key": "bot_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Bot info (Permission: BOTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Bot info (Permission: BOTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/bots/:bot_id/show?include_events=true",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"bots",
+														":bot_id",
+														"show"
+													],
+													"query": [
+														{
+															"key": "include_events",
+															"value": "true"
+														}
+													],
+													"variable": [
+														{
+															"key": "bot_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get Ver1Bots",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/bots?limit=50&offset=-30807547&account_id=-30807547&scope=enabled&strategy=long",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"bots"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "50",
+											"description": "Limit records. Max: 100"
+										},
+										{
+											"key": "offset",
+											"value": "-30807547",
+											"description": "Offset records"
+										},
+										{
+											"key": "account_id",
+											"value": "-30807547",
+											"description": "Account to show bots on. Return all if not specified. Gather this from GET /ver1/accounts"
+										},
+										{
+											"key": "scope",
+											"value": "enabled"
+										},
+										{
+											"key": "strategy",
+											"value": "long"
+										}
+									]
+								},
+								"description": "User bots (Permission: BOTS_READ, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "User bots (Permission: BOTS_READ, Security: SIGNED)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots?limit=50&offset=-30807547&account_id=-30807547&scope=enabled&strategy=long",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots"
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "50"
+												},
+												{
+													"key": "offset",
+													"value": "-30807547"
+												},
+												{
+													"key": "account_id",
+													"value": "-30807547"
+												},
+												{
+													"key": "scope",
+													"value": "enabled"
+												},
+												{
+													"key": "strategy",
+													"value": "long"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "get Ver1Bots Strategy List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/bots/strategy_list?account_id=-30807547&type=composite&strategy=long",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"bots",
+										"strategy_list"
+									],
+									"query": [
+										{
+											"key": "account_id",
+											"value": "-30807547",
+											"description": "id from GET /ver1/accounts"
+										},
+										{
+											"key": "type",
+											"value": "composite"
+										},
+										{
+											"key": "strategy",
+											"value": "long"
+										}
+									]
+								},
+								"description": "Available strategy list for bot (Permission: BOTS_READ, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Available strategy list for bot (Permission: BOTS_READ, Security: SIGNED)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/strategy_list?account_id=-30807547&type=composite&strategy=long",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												"strategy_list"
+											],
+											"query": [
+												{
+													"key": "account_id",
+													"value": "-30807547"
+												},
+												{
+													"key": "type",
+													"value": "composite"
+												},
+												{
+													"key": "strategy",
+													"value": "long"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "get Ver1Bots Pairs Black List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/bots/pairs_black_list",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"bots",
+										"pairs_black_list"
+									]
+								},
+								"description": "Black List for bot pairs (Permission: BOTS_READ, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Black List for bot pairs (Permission: BOTS_READ, Security: SIGNED)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/pairs_black_list",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												"pairs_black_list"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Bots Update Pairs Black List",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "pairs",
+											"value": "est Lorem pa",
+											"description": "(Required) "
+										},
+										{
+											"key": "pairs",
+											"value": "aliquip",
+											"description": "(Required) "
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/bots/update_pairs_black_list",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"bots",
+										"update_pairs_black_list"
+									]
+								},
+								"description": "Create or Update pairs BlackList for bots (Permission: BOTS_WRITE, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Create or Update pairs BlackList for bots (Permission: BOTS_WRITE, Security: SIGNED)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "pairs",
+													"value": "laboris minim magna ut non",
+													"description": "(Required) "
+												},
+												{
+													"key": "pairs",
+													"value": "non irure esse",
+													"description": "(Required) "
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/update_pairs_black_list",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												"update_pairs_black_list"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Bots Create Bot",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/bots/create_bot",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"bots",
+										"create_bot"
+									]
+								},
+								"description": "Create bot (Permission: BOTS_WRITE, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Create bot (Permission: BOTS_WRITE, Security: SIGNED)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/create_bot",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												"create_bot"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "get Ver1Bots Stats",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/bots/stats?account_id=-30807547&bot_id=-30807547",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"bots",
+										"stats"
+									],
+									"query": [
+										{
+											"key": "account_id",
+											"value": "-30807547",
+											"description": "Account to show on. Null - show for all. Gather this from GET /ver1/accounts"
+										},
+										{
+											"key": "bot_id",
+											"value": "-30807547",
+											"description": "Bots to show on. Null - show for all"
+										}
+									]
+								},
+								"description": "Get bot stats (Permission: BOTS_READ, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Get bot stats (Permission: BOTS_READ, Security: SIGNED)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/bots/stats?account_id=-30807547&bot_id=-30807547",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"bots",
+												"stats"
+											],
+											"query": [
+												{
+													"key": "account_id",
+													"value": "-30807547"
+												},
+												{
+													"key": "bot_id",
+													"value": "-30807547"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "deals",
+					"item": [
+						{
+							"name": "{deal id}",
+							"item": [
+								{
+									"name": "post Ver1Deals Deal Id Update Max Safety Orders",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "max_safety_orders",
+													"value": "-15177635",
+													"description": "(Required) New maximum safety orders value"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/deals/:deal_id/update_max_safety_orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"deals",
+												":deal_id",
+												"update_max_safety_orders"
+											],
+											"variable": [
+												{
+													"key": "deal_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "DEPRECATED, Update max safety orders (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "DEPRECATED, Update max safety orders (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "max_safety_orders",
+															"value": "-15177635",
+															"description": "(Required) New maximum safety orders value"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/deals/:deal_id/update_max_safety_orders",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"deals",
+														":deal_id",
+														"update_max_safety_orders"
+													],
+													"variable": [
+														{
+															"key": "deal_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Deals Deal Id Panic Sell",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/deals/:deal_id/panic_sell",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"deals",
+												":deal_id",
+												"panic_sell"
+											],
+											"variable": [
+												{
+													"key": "deal_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Panic sell deal (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Panic sell deal (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/deals/:deal_id/panic_sell",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"deals",
+														":deal_id",
+														"panic_sell"
+													],
+													"variable": [
+														{
+															"key": "deal_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Deals Deal Id Cancel",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/deals/:deal_id/cancel",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"deals",
+												":deal_id",
+												"cancel"
+											],
+											"variable": [
+												{
+													"key": "deal_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Cancel deal (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Cancel deal (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/deals/:deal_id/cancel",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"deals",
+														":deal_id",
+														"cancel"
+													],
+													"variable": [
+														{
+															"key": "deal_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "patch Ver1Deals Deal Id Update Deal",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "take_profit",
+													"value": "-30184839.20696093",
+													"description": "New take profit value"
+												},
+												{
+													"key": "profit_currency",
+													"value": "quote_currency"
+												},
+												{
+													"key": "take_profit_type",
+													"value": "nulla officia in reprehenderit",
+													"description": "base – from base order, total – from total volume"
+												},
+												{
+													"key": "trailing_enabled",
+													"value": "true"
+												},
+												{
+													"key": "trailing_deviation",
+													"value": "-46326885.12611689",
+													"description": "New trailing deviation value"
+												},
+												{
+													"key": "stop_loss_percentage",
+													"value": "-59890809.54656818",
+													"description": "New stop loss percentage value"
+												},
+												{
+													"key": "max_safety_orders",
+													"value": "-19398777",
+													"description": "New max safety orders value"
+												},
+												{
+													"key": "active_safety_orders_count",
+													"value": "-63122656",
+													"description": "New active safety orders count value"
+												},
+												{
+													"key": "stop_loss_timeout_enabled",
+													"value": "true"
+												},
+												{
+													"key": "stop_loss_timeout_in_seconds",
+													"value": "-77224774",
+													"description": "StopLoss timeout in seconds if StopLoss timeout enabled"
+												},
+												{
+													"key": "tsl_enabled",
+													"value": "true",
+													"description": "Trailing stop loss enabled"
+												},
+												{
+													"key": "stop_loss_type",
+													"value": "stop_loss"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/deals/:deal_id/update_deal",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"deals",
+												":deal_id",
+												"update_deal"
+											],
+											"variable": [
+												{
+													"key": "deal_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Update deal (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Update deal (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "take_profit",
+															"value": "-30184839.20696093",
+															"description": "New take profit value"
+														},
+														{
+															"key": "profit_currency",
+															"value": "quote_currency"
+														},
+														{
+															"key": "take_profit_type",
+															"value": "nulla officia in reprehenderit",
+															"description": "base – from base order, total – from total volume"
+														},
+														{
+															"key": "trailing_enabled",
+															"value": "true"
+														},
+														{
+															"key": "trailing_deviation",
+															"value": "-46326885.12611689",
+															"description": "New trailing deviation value"
+														},
+														{
+															"key": "stop_loss_percentage",
+															"value": "-59890809.54656818",
+															"description": "New stop loss percentage value"
+														},
+														{
+															"key": "max_safety_orders",
+															"value": "-19398777",
+															"description": "New max safety orders value"
+														},
+														{
+															"key": "active_safety_orders_count",
+															"value": "-63122656",
+															"description": "New active safety orders count value"
+														},
+														{
+															"key": "stop_loss_timeout_enabled",
+															"value": "true"
+														},
+														{
+															"key": "stop_loss_timeout_in_seconds",
+															"value": "-77224774",
+															"description": "StopLoss timeout in seconds if StopLoss timeout enabled"
+														},
+														{
+															"key": "tsl_enabled",
+															"value": "true",
+															"description": "Trailing stop loss enabled"
+														},
+														{
+															"key": "stop_loss_type",
+															"value": "stop_loss"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/deals/:deal_id/update_deal",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"deals",
+														":deal_id",
+														"update_deal"
+													],
+													"variable": [
+														{
+															"key": "deal_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Deals Deal Id Update Tp",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "new_take_profit_percentage",
+													"value": "4586481.259489834",
+													"description": "(Required) New take profit value"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/deals/:deal_id/update_tp",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"deals",
+												":deal_id",
+												"update_tp"
+											],
+											"variable": [
+												{
+													"key": "deal_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "DEPRECATED, Update take profit condition. Deal status should be bought (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "DEPRECATED, Update take profit condition. Deal status should be bought (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "new_take_profit_percentage",
+															"value": "4586481.259489834",
+															"description": "(Required) New take profit value"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/deals/:deal_id/update_tp",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"deals",
+														":deal_id",
+														"update_tp"
+													],
+													"variable": [
+														{
+															"key": "deal_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "get Ver1Deals Deal Id Show",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/deals/:deal_id/show",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"deals",
+												":deal_id",
+												"show"
+											],
+											"variable": [
+												{
+													"key": "deal_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Info about specific deal (Permission: BOTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Info about specific deal (Permission: BOTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/deals/:deal_id/show",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"deals",
+														":deal_id",
+														"show"
+													],
+													"variable": [
+														{
+															"key": "deal_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Deals Deal Id Cancel Order",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "order_id",
+													"value": "labore aliquip ullamc",
+													"description": "(Required) manual safety order id"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/deals/:deal_id/cancel_order",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"deals",
+												":deal_id",
+												"cancel_order"
+											],
+											"variable": [
+												{
+													"key": "deal_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Cancel manual safety orders (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Cancel manual safety orders (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "order_id",
+															"value": "labore aliquip ullamc",
+															"description": "(Required) manual safety order id"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/deals/:deal_id/cancel_order",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"deals",
+														":deal_id",
+														"cancel_order"
+													],
+													"variable": [
+														{
+															"key": "deal_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "get Ver1Deals Deal Id Market Orders",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/deals/:deal_id/market_orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"deals",
+												":deal_id",
+												"market_orders"
+											],
+											"variable": [
+												{
+													"key": "deal_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Deal safety orders (Permission: BOTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Deal safety orders (Permission: BOTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/deals/:deal_id/market_orders",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"deals",
+														":deal_id",
+														"market_orders"
+													],
+													"variable": [
+														{
+															"key": "deal_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Deals Deal Id Add Funds",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "quantity",
+													"value": "-7092388.8774406165",
+													"description": "(Required) safety order quantity"
+												},
+												{
+													"key": "is_market",
+													"value": "true",
+													"description": "(Required) true - use MARKET order, false - use LIMIT order"
+												},
+												{
+													"key": "rate",
+													"value": "87420310.53127003",
+													"description": "(Required) safety order rate. Required if LIMIT order used"
+												},
+												{
+													"key": "response_type",
+													"value": "empty"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/deals/:deal_id/add_funds",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"deals",
+												":deal_id",
+												"add_funds"
+											],
+											"variable": [
+												{
+													"key": "deal_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Adding manual safety order (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Adding manual safety order (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "quantity",
+															"value": "-7092388.8774406165",
+															"description": "(Required) safety order quantity"
+														},
+														{
+															"key": "is_market",
+															"value": "true",
+															"description": "(Required) true - use MARKET order, false - use LIMIT order"
+														},
+														{
+															"key": "rate",
+															"value": "87420310.53127003",
+															"description": "(Required) safety order rate. Required if LIMIT order used"
+														},
+														{
+															"key": "response_type",
+															"value": "empty"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/deals/:deal_id/add_funds",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"deals",
+														":deal_id",
+														"add_funds"
+													],
+													"variable": [
+														{
+															"key": "deal_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "get Ver1Deals Deal Id Data For Adding Funds",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/deals/:deal_id/data_for_adding_funds",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"deals",
+												":deal_id",
+												"data_for_adding_funds"
+											],
+											"variable": [
+												{
+													"key": "deal_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Info required to add funds correctly: available amounts, exchange limitations etc  (Permission: BOTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Info required to add funds correctly: available amounts, exchange limitations etc  (Permission: BOTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/deals/:deal_id/data_for_adding_funds",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"deals",
+														":deal_id",
+														"data_for_adding_funds"
+													],
+													"variable": [
+														{
+															"key": "deal_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get Ver1Deals",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/deals?limit=50&offset=-30807547&account_id=-30807547&bot_id=-30807547&scope=anim et irure&order=created_at",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"deals"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "50",
+											"description": "Limit records. Max: 1_000"
+										},
+										{
+											"key": "offset",
+											"value": "-30807547",
+											"description": "Offset records"
+										},
+										{
+											"key": "account_id",
+											"value": "-30807547",
+											"description": "Account to show bots on. Return all if not specified. Gather this from GET /ver1/accounts"
+										},
+										{
+											"key": "bot_id",
+											"value": "-30807547",
+											"description": "Bot show deals on. Return all if not specified"
+										},
+										{
+											"key": "scope",
+											"value": "anim et irure",
+											"description": "active - active deals, finished - finished deals, completed - successfully completed, cancelled - cancelled deals, failed - failed deals, any other value or null (default) - all deals"
+										},
+										{
+											"key": "order",
+											"value": "created_at"
+										}
+									]
+								},
+								"description": "User deals (Permission: BOTS_READ, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "User deals (Permission: BOTS_READ, Security: SIGNED)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/deals?limit=50&offset=-30807547&account_id=-30807547&bot_id=-30807547&scope=anim et irure&order=created_at",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"deals"
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "50"
+												},
+												{
+													"key": "offset",
+													"value": "-30807547"
+												},
+												{
+													"key": "account_id",
+													"value": "-30807547"
+												},
+												{
+													"key": "bot_id",
+													"value": "-30807547"
+												},
+												{
+													"key": "scope",
+													"value": "anim et irure"
+												},
+												{
+													"key": "order",
+													"value": "created_at"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "accounts",
+					"item": [
+						{
+							"name": "{account id}",
+							"item": [
+								{
+									"name": "get Ver1Accounts Account Id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/:account_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												":account_id"
+											],
+											"variable": [
+												{
+													"key": "account_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Single Account Info (Permission: ACCOUNTS_READ, Security: SIGNED)\nYou can send 'summary' instead of {account_id} to get summary account info"
+									},
+									"response": [
+										{
+											"name": "Single Account Info (Permission: ACCOUNTS_READ, Security: SIGNED)\nYou can send 'summary' instead of {account_id} to get summary account info",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/accounts/:account_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"accounts",
+														":account_id"
+													],
+													"variable": [
+														{
+															"key": "account_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "get Ver1Accounts Account Id Active Trading Entities",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/:account_id/active_trading_entities",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												":account_id",
+												"active_trading_entities"
+											],
+											"variable": [
+												{
+													"key": "account_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Active trade entities (Permission: ACCOUNTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Active trade entities (Permission: ACCOUNTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/accounts/:account_id/active_trading_entities",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"accounts",
+														":account_id",
+														"active_trading_entities"
+													],
+													"variable": [
+														{
+															"key": "account_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Accounts Account Id Sell All To Usd",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/:account_id/sell_all_to_usd",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												":account_id",
+												"sell_all_to_usd"
+											],
+											"variable": [
+												{
+													"key": "account_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Sell all to USD  (Permission: ACCOUNTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Sell all to USD  (Permission: ACCOUNTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/accounts/:account_id/sell_all_to_usd",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"accounts",
+														":account_id",
+														"sell_all_to_usd"
+													],
+													"variable": [
+														{
+															"key": "account_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Accounts Account Id Sell All To Btc",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/:account_id/sell_all_to_btc",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												":account_id",
+												"sell_all_to_btc"
+											],
+											"variable": [
+												{
+													"key": "account_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Sell all to BTC  (Permission: ACCOUNTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Sell all to BTC  (Permission: ACCOUNTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/accounts/:account_id/sell_all_to_btc",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"accounts",
+														":account_id",
+														"sell_all_to_btc"
+													],
+													"variable": [
+														{
+															"key": "account_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "get Ver1Accounts Account Id Balance Chart Data",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/:account_id/balance_chart_data?date_from=1995-12-03T13:44:37.245Z&date_to=1995-12-03T13:44:37.245Z",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												":account_id",
+												"balance_chart_data"
+											],
+											"query": [
+												{
+													"key": "date_from",
+													"value": "1995-12-03T13:44:37.245Z",
+													"description": "(Required) "
+												},
+												{
+													"key": "date_to",
+													"value": "1995-12-03T13:44:37.245Z"
+												}
+											],
+											"variable": [
+												{
+													"key": "account_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "balance history data (Permission: ACCOUNTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "balance history data (Permission: ACCOUNTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/accounts/:account_id/balance_chart_data?date_from=1995-12-03T13:44:37.245Z&date_to=1995-12-03T13:44:37.245Z",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"accounts",
+														":account_id",
+														"balance_chart_data"
+													],
+													"query": [
+														{
+															"key": "date_from",
+															"value": "1995-12-03T13:44:37.245Z"
+														},
+														{
+															"key": "date_to",
+															"value": "1995-12-03T13:44:37.245Z"
+														}
+													],
+													"variable": [
+														{
+															"key": "account_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Accounts Account Id Load Balances",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/:account_id/load_balances",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												":account_id",
+												"load_balances"
+											],
+											"variable": [
+												{
+													"key": "account_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Load balances for specified exchange  (Permission: ACCOUNTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Load balances for specified exchange  (Permission: ACCOUNTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/accounts/:account_id/load_balances",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"accounts",
+														":account_id",
+														"load_balances"
+													],
+													"variable": [
+														{
+															"key": "account_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Accounts Account Id Rename",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "incididunt commodo",
+													"description": "(Required) "
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/:account_id/rename",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												":account_id",
+												"rename"
+											],
+											"variable": [
+												{
+													"key": "account_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Rename exchange connection  (Permission: ACCOUNTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Rename exchange connection  (Permission: ACCOUNTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "name",
+															"value": "incididunt commodo",
+															"description": "(Required) "
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/accounts/:account_id/rename",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"accounts",
+														":account_id",
+														"rename"
+													],
+													"variable": [
+														{
+															"key": "account_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Accounts Account Id Pie Chart Data",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/:account_id/pie_chart_data",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												":account_id",
+												"pie_chart_data"
+											],
+											"variable": [
+												{
+													"key": "account_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Information about all user balances on specified exchange in pretty for pie chart format (Permission: ACCOUNTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Information about all user balances on specified exchange in pretty for pie chart format (Permission: ACCOUNTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/accounts/:account_id/pie_chart_data",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"accounts",
+														":account_id",
+														"pie_chart_data"
+													],
+													"variable": [
+														{
+															"key": "account_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Accounts Account Id Account Table Data",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/:account_id/account_table_data",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												":account_id",
+												"account_table_data"
+											],
+											"variable": [
+												{
+													"key": "account_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Information about all user balances on specified exchange  (Permission: ACCOUNTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Information about all user balances on specified exchange  (Permission: ACCOUNTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/accounts/:account_id/account_table_data",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"accounts",
+														":account_id",
+														"account_table_data"
+													],
+													"variable": [
+														{
+															"key": "account_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Accounts Account Id Remove",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/:account_id/remove",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												":account_id",
+												"remove"
+											],
+											"variable": [
+												{
+													"key": "account_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Remove exchange connection  (Permission: ACCOUNTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Remove exchange connection  (Permission: ACCOUNTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/accounts/:account_id/remove",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"accounts",
+														":account_id",
+														"remove"
+													],
+													"variable": [
+														{
+															"key": "account_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "get Ver1Accounts Account Id Leverage Data",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/:account_id/leverage_data?pair=anim et irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												":account_id",
+												"leverage_data"
+											],
+											"query": [
+												{
+													"key": "pair",
+													"value": "anim et irure",
+													"description": "(Required) "
+												}
+											],
+											"variable": [
+												{
+													"key": "account_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Information about account leverage (Permission: ACCOUNTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Information about account leverage (Permission: ACCOUNTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/accounts/:account_id/leverage_data?pair=anim et irure",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"accounts",
+														":account_id",
+														"leverage_data"
+													],
+													"query": [
+														{
+															"key": "pair",
+															"value": "anim et irure"
+														}
+													],
+													"variable": [
+														{
+															"key": "account_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get Ver1Accounts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/accounts",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"accounts"
+									]
+								},
+								"description": "User connected exchanges(and EthereumWallet) list (Permission: ACCOUNTS_READ, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "User connected exchanges(and EthereumWallet) list (Permission: ACCOUNTS_READ, Security: SIGNED)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Accounts Transfer",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "currency",
+											"value": "ullamco incididunt ut",
+											"description": "(Required) Currency code(example: USDT)"
+										},
+										{
+											"key": "amount",
+											"value": "-50278683.34063315",
+											"description": "(Required) "
+										},
+										{
+											"key": "to_account_id",
+											"value": "-38178275",
+											"description": "(Required) Recipient account ID (possible values in /transfer_data)"
+										},
+										{
+											"key": "from_account_id",
+											"value": "-78993159",
+											"description": "(Required) Sender account ID (possible values in /transfer_data)"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/accounts/transfer",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"accounts",
+										"transfer"
+									]
+								},
+								"description": "Transfer coins between accounts (Permission: ACCOUNTS_WRITE, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Transfer coins between accounts (Permission: ACCOUNTS_WRITE, Security: SIGNED)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "currency",
+													"value": "ullamco incididunt ut",
+													"description": "(Required) Currency code(example: USDT)"
+												},
+												{
+													"key": "amount",
+													"value": "-50278683.34063315",
+													"description": "(Required) "
+												},
+												{
+													"key": "to_account_id",
+													"value": "-38178275",
+													"description": "(Required) Recipient account ID (possible values in /transfer_data)"
+												},
+												{
+													"key": "from_account_id",
+													"value": "-78993159",
+													"description": "(Required) Sender account ID (possible values in /transfer_data)"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/transfer",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												"transfer"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "get Ver1Accounts Transfer History",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/accounts/transfer_history?account_id=-30807547&currency=anim et irure&page=1&per_page=10",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"accounts",
+										"transfer_history"
+									],
+									"query": [
+										{
+											"key": "account_id",
+											"value": "-30807547",
+											"description": "(Required) Sender or Recipient account ID (possible values in /transfer_data)"
+										},
+										{
+											"key": "currency",
+											"value": "anim et irure",
+											"description": "(Required) Currency code(example: USDT)"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"description": "Page number"
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"description": "Elements per page"
+										}
+									]
+								},
+								"description": "Transfers history (Permission: ACCOUNTS_READ, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Transfers history (Permission: ACCOUNTS_READ, Security: SIGNED)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/transfer_history?account_id=-30807547&currency=anim et irure&page=1&per_page=10",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												"transfer_history"
+											],
+											"query": [
+												{
+													"key": "account_id",
+													"value": "-30807547"
+												},
+												{
+													"key": "currency",
+													"value": "anim et irure"
+												},
+												{
+													"key": "page",
+													"value": "1"
+												},
+												{
+													"key": "per_page",
+													"value": "10"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "get Ver1Accounts Transfer Data",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/accounts/transfer_data",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"accounts",
+										"transfer_data"
+									]
+								},
+								"description": "Data for transfer between accounts (Permission: ACCOUNTS_READ, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Data for transfer between accounts (Permission: ACCOUNTS_READ, Security: SIGNED)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/transfer_data",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												"transfer_data"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Accounts New",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/accounts/new",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"accounts",
+										"new"
+									]
+								},
+								"description": "Add exchange account  (Permission: ACCOUNTS_WRITE, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Add exchange account  (Permission: ACCOUNTS_WRITE, Security: SIGNED)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/new",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												"new"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Accounts Update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account_id",
+											"value": "17876531",
+											"description": "(Required) "
+										},
+										{
+											"key": "name",
+											"value": "quis amet laboris Ut occaecat",
+											"description": "Account name (any string)"
+										},
+										{
+											"key": "api_key",
+											"value": "tempor laborum est voluptate"
+										},
+										{
+											"key": "secret",
+											"value": "Excepteur sed officia"
+										},
+										{
+											"key": "customer_id",
+											"value": "ut eu",
+											"description": "For Bitstamp"
+										},
+										{
+											"key": "passphrase",
+											"value": "nulla",
+											"description": "For Coinbase Pro (GDAX)"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/accounts/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"accounts",
+										"update"
+									]
+								},
+								"description": "Edit exchange account"
+							},
+							"response": [
+								{
+									"name": "Edit exchange account",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "account_id",
+													"value": "17876531",
+													"description": "(Required) "
+												},
+												{
+													"key": "name",
+													"value": "quis amet laboris Ut occaecat",
+													"description": "Account name (any string)"
+												},
+												{
+													"key": "api_key",
+													"value": "tempor laborum est voluptate"
+												},
+												{
+													"key": "secret",
+													"value": "Excepteur sed officia"
+												},
+												{
+													"key": "customer_id",
+													"value": "ut eu",
+													"description": "For Bitstamp"
+												},
+												{
+													"key": "passphrase",
+													"value": "nulla",
+													"description": "For Coinbase Pro (GDAX)"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												"update"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "get Ver1Accounts Market List",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/accounts/market_list",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"accounts",
+										"market_list"
+									]
+								},
+								"description": "Supported markets list (Permission: NONE, Security: NONE)"
+							},
+							"response": [
+								{
+									"name": "Supported markets list (Permission: NONE, Security: NONE)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/market_list",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												"market_list"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "get Ver1Accounts Market Pairs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/accounts/market_pairs?pretty_display_type=anim et irure&market_code=anim et irure",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"accounts",
+										"market_pairs"
+									],
+									"query": [
+										{
+											"key": "pretty_display_type",
+											"value": "anim et irure",
+											"description": "deprecated. use market_code instead"
+										},
+										{
+											"key": "market_code",
+											"value": "anim et irure",
+											"description": "market_code from account model"
+										}
+									]
+								},
+								"description": "All market pairs (Permission: NONE, Security: NONE)"
+							},
+							"response": [
+								{
+									"name": "All market pairs (Permission: NONE, Security: NONE)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/market_pairs?pretty_display_type=anim et irure&market_code=anim et irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												"market_pairs"
+											],
+											"query": [
+												{
+													"key": "pretty_display_type",
+													"value": "anim et irure"
+												},
+												{
+													"key": "market_code",
+													"value": "anim et irure"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "get Ver1Accounts Currency Rates",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/accounts/currency_rates?pretty_display_type=anim et irure&market_code=anim et irure&pair=anim et irure",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"accounts",
+										"currency_rates"
+									],
+									"query": [
+										{
+											"key": "pretty_display_type",
+											"value": "anim et irure",
+											"description": "deprecated. use market_code instead"
+										},
+										{
+											"key": "market_code",
+											"value": "anim et irure",
+											"description": "market_code from account model"
+										},
+										{
+											"key": "pair",
+											"value": "anim et irure",
+											"description": "(Required) Pair"
+										}
+									]
+								},
+								"description": "Currency rates and limits (Permission: NONE, Security: NONE)"
+							},
+							"response": [
+								{
+									"name": "Currency rates and limits (Permission: NONE, Security: NONE)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/accounts/currency_rates?pretty_display_type=anim et irure&market_code=anim et irure&pair=anim et irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"accounts",
+												"currency_rates"
+											],
+											"query": [
+												{
+													"key": "pretty_display_type",
+													"value": "anim et irure"
+												},
+												{
+													"key": "market_code",
+													"value": "anim et irure"
+												},
+												{
+													"key": "pair",
+													"value": "anim et irure"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "smart trades",
+					"item": [
+						{
+							"name": "{smart trade id}",
+							"item": [
+								{
+									"name": "post Ver1Smart Trades Smart Trade Id Cancel Order",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "step_id",
+													"value": "do fugiat",
+													"description": "(Required) SmartTrade step id to cancel"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/cancel_order",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												":smart_trade_id",
+												"cancel_order"
+											],
+											"variable": [
+												{
+													"key": "smart_trade_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Manual cancel order (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Manual cancel order (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "step_id",
+															"value": "do fugiat",
+															"description": "(Required) SmartTrade step id to cancel"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/cancel_order",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"smart_trades",
+														":smart_trade_id",
+														"cancel_order"
+													],
+													"variable": [
+														{
+															"key": "smart_trade_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Smart Trades Smart Trade Id Add Funds",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "quantity",
+													"value": "-13312075.384514049",
+													"description": "(Required) buy order quantity"
+												},
+												{
+													"key": "is_market",
+													"value": "true",
+													"description": "(Required) true - use MARKET order, false - use LIMIT order"
+												},
+												{
+													"key": "rate",
+													"value": "-38000524.0940962",
+													"description": "(Required) buy order rate. Required if LIMIT order used"
+												},
+												{
+													"key": "response_type",
+													"value": "empty"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/add_funds",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												":smart_trade_id",
+												"add_funds"
+											],
+											"variable": [
+												{
+													"key": "smart_trade_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Smart Trade add funds (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Smart Trade add funds (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "quantity",
+															"value": "-13312075.384514049",
+															"description": "(Required) buy order quantity"
+														},
+														{
+															"key": "is_market",
+															"value": "true",
+															"description": "(Required) true - use MARKET order, false - use LIMIT order"
+														},
+														{
+															"key": "rate",
+															"value": "-38000524.0940962",
+															"description": "(Required) buy order rate. Required if LIMIT order used"
+														},
+														{
+															"key": "response_type",
+															"value": "empty"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/add_funds",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"smart_trades",
+														":smart_trade_id",
+														"add_funds"
+													],
+													"variable": [
+														{
+															"key": "smart_trade_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Smart Trades Smart Trade Id Step Panic Sell",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "step_id",
+													"value": "19219790",
+													"description": "(Required) "
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/step_panic_sell",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												":smart_trade_id",
+												"step_panic_sell"
+											],
+											"variable": [
+												{
+													"key": "smart_trade_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Step panic sell (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Step panic sell (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "step_id",
+															"value": "19219790",
+															"description": "(Required) "
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/step_panic_sell",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"smart_trades",
+														":smart_trade_id",
+														"step_panic_sell"
+													],
+													"variable": [
+														{
+															"key": "smart_trade_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "patch Ver1Smart Trades Smart Trade Id Update",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/update",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												":smart_trade_id",
+												"update"
+											],
+											"variable": [
+												{
+													"key": "smart_trade_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Edit SmartTrade/SmartSale/SmartCover (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Edit SmartTrade/SmartSale/SmartCover (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": []
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/update",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"smart_trades",
+														":smart_trade_id",
+														"update"
+													],
+													"variable": [
+														{
+															"key": "smart_trade_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Smart Trades Smart Trade Id Cancel",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/cancel",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												":smart_trade_id",
+												"cancel"
+											],
+											"variable": [
+												{
+													"key": "smart_trade_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Cancel SmartTrade (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Cancel SmartTrade (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/cancel",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"smart_trades",
+														":smart_trade_id",
+														"cancel"
+													],
+													"variable": [
+														{
+															"key": "smart_trade_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Smart Trades Smart Trade Id Panic Sell",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/panic_sell",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												":smart_trade_id",
+												"panic_sell"
+											],
+											"variable": [
+												{
+													"key": "smart_trade_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Sell currency immediately (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Sell currency immediately (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/panic_sell",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"smart_trades",
+														":smart_trade_id",
+														"panic_sell"
+													],
+													"variable": [
+														{
+															"key": "smart_trade_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Smart Trades Smart Trade Id Force Start",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/force_start",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												":smart_trade_id",
+												"force_start"
+											],
+											"variable": [
+												{
+													"key": "smart_trade_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Process BuyStep immediately  (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Process BuyStep immediately  (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/force_start",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"smart_trades",
+														":smart_trade_id",
+														"force_start"
+													],
+													"variable": [
+														{
+															"key": "smart_trade_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Smart Trades Smart Trade Id Force Process",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/force_process",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												":smart_trade_id",
+												"force_process"
+											],
+											"variable": [
+												{
+													"key": "smart_trade_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Refresh SmartTrade state (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Refresh SmartTrade state (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/force_process",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"smart_trades",
+														":smart_trade_id",
+														"force_process"
+													],
+													"variable": [
+														{
+															"key": "smart_trade_id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "get Ver1Smart Trades Smart Trade Id Show",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/show",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												":smart_trade_id",
+												"show"
+											],
+											"variable": [
+												{
+													"key": "smart_trade_id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "get Show(s)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/smart_trades/:smart_trade_id/show",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"smart_trades",
+														":smart_trade_id",
+														"show"
+													],
+													"variable": [
+														{
+															"key": "smart_trade_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get Ver1Smart Trades",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/smart_trades?limit=-30807547&offset=-30807547&account_id=-30807547&scope=anim et irure&type=anim et irure&order=created_at",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"smart_trades"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "-30807547",
+											"description": "Limit records"
+										},
+										{
+											"key": "offset",
+											"value": "-30807547",
+											"description": "Offset records"
+										},
+										{
+											"key": "account_id",
+											"value": "-30807547",
+											"description": "Account to show smart_trades on. Pass null (default) - show all"
+										},
+										{
+											"key": "scope",
+											"value": "anim et irure",
+											"description": "active - show only active trades, finished - history of closed trades, cancelled - cancelled trades, failed - failed trades, any other value or null (default) - all trades"
+										},
+										{
+											"key": "type",
+											"value": "anim et irure",
+											"description": "SmartTrade::SmartSale , SmartTrade::Classic , SmartTrade::ConditionalBuy"
+										},
+										{
+											"key": "order",
+											"value": "created_at"
+										}
+									]
+								},
+								"description": "Get SmartTrade history (Permission: SMART_TRADE_READ, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Get SmartTrade history (Permission: SMART_TRADE_READ, Security: SIGNED)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades?limit=-30807547&offset=-30807547&account_id=-30807547&scope=anim et irure&type=anim et irure&order=created_at",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades"
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "-30807547"
+												},
+												{
+													"key": "offset",
+													"value": "-30807547"
+												},
+												{
+													"key": "account_id",
+													"value": "-30807547"
+												},
+												{
+													"key": "scope",
+													"value": "anim et irure"
+												},
+												{
+													"key": "type",
+													"value": "anim et irure"
+												},
+												{
+													"key": "order",
+													"value": "created_at"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Smart Trades Create Simple Sell",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account_id",
+											"value": "37646578",
+											"description": "(Required) id from GET /ver1/accounts"
+										},
+										{
+											"key": "pair",
+											"value": "consectetur sed dolor",
+											"description": "(Required) "
+										},
+										{
+											"key": "units_to_buy",
+											"value": "99977603.6944319",
+											"description": "(Required) Amount of units to buy"
+										},
+										{
+											"key": "buy_price",
+											"value": "-52094194.146979555",
+											"description": "(Required) "
+										},
+										{
+											"key": "buy_method",
+											"value": "limit",
+											"description": "(Required) "
+										},
+										{
+											"key": "conditional_limit_price",
+											"value": "-53017495.06944766",
+											"description": "Order price for conditional SimpleSell with limit order"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/smart_trades/create_simple_sell",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"smart_trades",
+										"create_simple_sell"
+									]
+								},
+								"description": "Create SimpleSell (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Create SimpleSell (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "account_id",
+													"value": "37646578",
+													"description": "(Required) id from GET /ver1/accounts"
+												},
+												{
+													"key": "pair",
+													"value": "consectetur sed dolor",
+													"description": "(Required) "
+												},
+												{
+													"key": "units_to_buy",
+													"value": "99977603.6944319",
+													"description": "(Required) Amount of units to buy"
+												},
+												{
+													"key": "buy_price",
+													"value": "-52094194.146979555",
+													"description": "(Required) "
+												},
+												{
+													"key": "buy_method",
+													"value": "limit",
+													"description": "(Required) "
+												},
+												{
+													"key": "conditional_limit_price",
+													"value": "-53017495.06944766",
+													"description": "Order price for conditional SimpleSell with limit order"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/create_simple_sell",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												"create_simple_sell"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Smart Trades Create Simple Buy",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account_id",
+											"value": "-53295300",
+											"description": "(Required) id from GET /ver1/accounts"
+										},
+										{
+											"key": "pair",
+											"value": "Excepteur",
+											"description": "(Required) "
+										},
+										{
+											"key": "units_to_buy",
+											"value": "18835161.473714292",
+											"description": "(Required) Amount of units to buy"
+										},
+										{
+											"key": "buy_price",
+											"value": "77685110.42764059",
+											"description": "(Required) "
+										},
+										{
+											"key": "buy_method",
+											"value": "limit",
+											"description": "(Required) "
+										},
+										{
+											"key": "conditional_limit_price",
+											"value": "-79920538.45404446",
+											"description": "Order price for conditional SimpleBuy with limit order"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/smart_trades/create_simple_buy",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"smart_trades",
+										"create_simple_buy"
+									]
+								},
+								"description": "Create SimpleBuy (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Create SimpleBuy (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "account_id",
+													"value": "-53295300",
+													"description": "(Required) id from GET /ver1/accounts"
+												},
+												{
+													"key": "pair",
+													"value": "Excepteur",
+													"description": "(Required) "
+												},
+												{
+													"key": "units_to_buy",
+													"value": "18835161.473714292",
+													"description": "(Required) Amount of units to buy"
+												},
+												{
+													"key": "buy_price",
+													"value": "77685110.42764059",
+													"description": "(Required) "
+												},
+												{
+													"key": "buy_method",
+													"value": "limit",
+													"description": "(Required) "
+												},
+												{
+													"key": "conditional_limit_price",
+													"value": "-79920538.45404446",
+													"description": "Order price for conditional SimpleBuy with limit order"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/create_simple_buy",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												"create_simple_buy"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Smart Trades Create Smart Sell",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/smart_trades/create_smart_sell",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"smart_trades",
+										"create_smart_sell"
+									]
+								},
+								"description": "Create SmartSale (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Create SmartSale (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/create_smart_sell",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												"create_smart_sell"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Smart Trades Create Smart Cover",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/smart_trades/create_smart_cover",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"smart_trades",
+										"create_smart_cover"
+									]
+								},
+								"description": "Create SmartCover (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Create SmartCover (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/create_smart_cover",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												"create_smart_cover"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Smart Trades Create Smart Trade",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/smart_trades/create_smart_trade",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"smart_trades",
+										"create_smart_trade"
+									]
+								},
+								"description": "Create SmartTrade (Permission: SMART_TRADE_WRITE, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Create SmartTrade (Permission: SMART_TRADE_WRITE, Security: SIGNED)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": []
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/smart_trades/create_smart_trade",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"smart_trades",
+												"create_smart_trade"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "marketplace",
+					"item": [
+						{
+							"name": "get Ver1Marketplace Items",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/marketplace/items?limit=50&offset=-30807547&scope=all&order=newest&locale=en",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"marketplace",
+										"items"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "50",
+											"description": "Limit records. Max: 1_000"
+										},
+										{
+											"key": "offset",
+											"value": "-30807547",
+											"description": "Offset records"
+										},
+										{
+											"key": "scope",
+											"value": "all",
+											"description": "paid - show only paid signal providers. free - show only free signal providers"
+										},
+										{
+											"key": "order",
+											"value": "newest"
+										},
+										{
+											"key": "locale",
+											"value": "en"
+										}
+									]
+								},
+								"description": "All marketplace items (Permission: NONE, Security: NONE)"
+							},
+							"response": [
+								{
+									"name": "All marketplace items (Permission: NONE, Security: NONE)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/marketplace/items?limit=50&offset=-30807547&scope=all&order=newest&locale=en",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"marketplace",
+												"items"
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "50"
+												},
+												{
+													"key": "offset",
+													"value": "-30807547"
+												},
+												{
+													"key": "scope",
+													"value": "all"
+												},
+												{
+													"key": "order",
+													"value": "newest"
+												},
+												{
+													"key": "locale",
+													"value": "en"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "get Ver1Marketplace Item Id Signals",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/marketplace/:item_id/signals?limit=50&offset=-30807547&order=date&order_direction=desc&locale=en",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"marketplace",
+										":item_id",
+										"signals"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "50",
+											"description": "Limit records. Max: 1_000"
+										},
+										{
+											"key": "offset",
+											"value": "-30807547",
+											"description": "Offset records"
+										},
+										{
+											"key": "order",
+											"value": "date"
+										},
+										{
+											"key": "order_direction",
+											"value": "desc"
+										},
+										{
+											"key": "locale",
+											"value": "en"
+										}
+									],
+									"variable": [
+										{
+											"key": "item_id",
+											"value": "-30807547",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Marketplace Item Signals (Permission: NONE, Security: NONE)"
+							},
+							"response": [
+								{
+									"name": "Marketplace Item Signals (Permission: NONE, Security: NONE)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/marketplace/:item_id/signals?limit=50&offset=-30807547&order=date&order_direction=desc&locale=en",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"marketplace",
+												":item_id",
+												"signals"
+											],
+											"query": [
+												{
+													"key": "limit",
+													"value": "50"
+												},
+												{
+													"key": "offset",
+													"value": "-30807547"
+												},
+												{
+													"key": "order",
+													"value": "date"
+												},
+												{
+													"key": "order_direction",
+													"value": "desc"
+												},
+												{
+													"key": "locale",
+													"value": "en"
+												}
+											],
+											"variable": [
+												{
+													"key": "item_id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "grid bots",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "get Ver1Grid Bots Id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Show Grid Bot (Permission: BOTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Show Grid Bot (Permission: BOTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/grid_bots/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"grid_bots",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "delete Ver1Grid Bots Id",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Delete Grid Bot (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Delete Grid Bot (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/grid_bots/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"grid_bots",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "get Ver1Grid Bots Id Market Orders",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/:id/market_orders",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												":id",
+												"market_orders"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Grid Bot Market Orders (Permission: BOTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Grid Bot Market Orders (Permission: BOTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/grid_bots/:id/market_orders",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"grid_bots",
+														":id",
+														"market_orders"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "get Ver1Grid Bots Id Profits",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/:id/profits",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												":id",
+												"profits"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Grid Bot Profits (Permission: BOTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Grid Bot Profits (Permission: BOTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/grid_bots/:id/profits",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"grid_bots",
+														":id",
+														"profits"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "patch Ver1Grid Bots Id Ai",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "pair",
+													"value": "voluptate",
+													"description": "(Required) "
+												},
+												{
+													"key": "total_quantity",
+													"value": "54476454.17725155",
+													"description": "(Required) "
+												},
+												{
+													"key": "leverage_type",
+													"value": "not_specified",
+													"description": "Leverage type for futures accounts"
+												},
+												{
+													"key": "leverage_custom_value",
+													"value": "-26591421.679686353",
+													"description": "Required if leverage_type = 'custom'"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/:id/ai",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												":id",
+												"ai"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Edit Grid Bot (AI) (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Edit Grid Bot (AI) (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "pair",
+															"value": "voluptate",
+															"description": "(Required) "
+														},
+														{
+															"key": "total_quantity",
+															"value": "54476454.17725155",
+															"description": "(Required) "
+														},
+														{
+															"key": "leverage_type",
+															"value": "not_specified",
+															"description": "Leverage type for futures accounts"
+														},
+														{
+															"key": "leverage_custom_value",
+															"value": "-26591421.679686353",
+															"description": "Required if leverage_type = 'custom'"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/grid_bots/:id/ai",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"grid_bots",
+														":id",
+														"ai"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "patch Ver1Grid Bots Id Manual",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/x-www-form-urlencoded"
+											}
+										],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "pair",
+													"value": "Ut elit Duis",
+													"description": "(Required) "
+												},
+												{
+													"key": "upper_price",
+													"value": "41258518.97014448",
+													"description": "(Required) "
+												},
+												{
+													"key": "lower_price",
+													"value": "-62552456.70629099",
+													"description": "(Required) "
+												},
+												{
+													"key": "quantity_per_grid",
+													"value": "26332523.362610877",
+													"description": "(Required) "
+												},
+												{
+													"key": "grids_quantity",
+													"value": "63926782.49190703",
+													"description": "(Required) "
+												},
+												{
+													"key": "leverage_type",
+													"value": "not_specified",
+													"description": "Leverage type for futures accounts"
+												},
+												{
+													"key": "leverage_custom_value",
+													"value": "65456338.90574503",
+													"description": "Required if leverage_type = 'custom'"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/:id/manual",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												":id",
+												"manual"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Edit Grid Bot (Manual) (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Edit Grid Bot (Manual) (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "pair",
+															"value": "Ut elit Duis",
+															"description": "(Required) "
+														},
+														{
+															"key": "upper_price",
+															"value": "41258518.97014448",
+															"description": "(Required) "
+														},
+														{
+															"key": "lower_price",
+															"value": "-62552456.70629099",
+															"description": "(Required) "
+														},
+														{
+															"key": "quantity_per_grid",
+															"value": "26332523.362610877",
+															"description": "(Required) "
+														},
+														{
+															"key": "grids_quantity",
+															"value": "63926782.49190703",
+															"description": "(Required) "
+														},
+														{
+															"key": "leverage_type",
+															"value": "not_specified",
+															"description": "Leverage type for futures accounts"
+														},
+														{
+															"key": "leverage_custom_value",
+															"value": "65456338.90574503",
+															"description": "Required if leverage_type = 'custom'"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{baseUrl}}/ver1/grid_bots/:id/manual",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"grid_bots",
+														":id",
+														"manual"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Grid Bots Id Disable",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/:id/disable",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												":id",
+												"disable"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Disable Grid Bot (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Disable Grid Bot (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/grid_bots/:id/disable",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"grid_bots",
+														":id",
+														"disable"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "post Ver1Grid Bots Id Enable",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/:id/enable",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												":id",
+												"enable"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Enable Grid Bot (Permission: BOTS_WRITE, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Enable Grid Bot (Permission: BOTS_WRITE, Security: SIGNED)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/grid_bots/:id/enable",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"grid_bots",
+														":id",
+														"enable"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "get Ver1Grid Bots Id Required Balances",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/:id/required_balances",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												":id",
+												"required_balances"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-30807547",
+													"description": "(Required) "
+												}
+											]
+										},
+										"description": "Get required balances to start bot(Permission: BOTS_READ, Security: SIGNED)"
+									},
+									"response": [
+										{
+											"name": "Get required balances to start bot(Permission: BOTS_READ, Security: SIGNED)",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/ver1/grid_bots/:id/required_balances",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"ver1",
+														"grid_bots",
+														":id",
+														"required_balances"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get Ver1Grid Bots",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/grid_bots?state=enabled&sort_by=bot_id&sort_direction=asc&limit=10&offset=0",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"grid_bots"
+									],
+									"query": [
+										{
+											"key": "state",
+											"value": "enabled",
+											"description": "Filter by bot state"
+										},
+										{
+											"key": "sort_by",
+											"value": "bot_id",
+											"description": "Sort column"
+										},
+										{
+											"key": "sort_direction",
+											"value": "asc",
+											"description": "Sort direction"
+										},
+										{
+											"key": "limit",
+											"value": "10"
+										},
+										{
+											"key": "offset",
+											"value": "0"
+										}
+									]
+								},
+								"description": "Grid bits list (Permission: BOTS_READ, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Grid bits list (Permission: BOTS_READ, Security: SIGNED)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots?state=enabled&sort_by=bot_id&sort_direction=asc&limit=10&offset=0",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots"
+											],
+											"query": [
+												{
+													"key": "state",
+													"value": "enabled"
+												},
+												{
+													"key": "sort_by",
+													"value": "bot_id"
+												},
+												{
+													"key": "sort_direction",
+													"value": "asc"
+												},
+												{
+													"key": "limit",
+													"value": "10"
+												},
+												{
+													"key": "offset",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Grid Bots Ai",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account_id",
+											"value": "-2269119",
+											"description": "(Required) id from GET /ver1/accounts"
+										},
+										{
+											"key": "pair",
+											"value": "",
+											"description": "(Required) "
+										},
+										{
+											"key": "total_quantity",
+											"value": "71034476.63289174",
+											"description": "(Required) "
+										},
+										{
+											"key": "leverage_type",
+											"value": "not_specified",
+											"description": "Leverage type for futures accounts"
+										},
+										{
+											"key": "leverage_custom_value",
+											"value": "16363767.331483945",
+											"description": "Required if leverage_type = 'custom'"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/grid_bots/ai",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"grid_bots",
+										"ai"
+									]
+								},
+								"description": "Create AI Grid Bot (Permission: BOTS_WRITE, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Create AI Grid Bot (Permission: BOTS_WRITE, Security: SIGNED)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "account_id",
+													"value": "-2269119",
+													"description": "(Required) id from GET /ver1/accounts"
+												},
+												{
+													"key": "pair",
+													"value": "",
+													"description": "(Required) "
+												},
+												{
+													"key": "total_quantity",
+													"value": "71034476.63289174",
+													"description": "(Required) "
+												},
+												{
+													"key": "leverage_type",
+													"value": "not_specified",
+													"description": "Leverage type for futures accounts"
+												},
+												{
+													"key": "leverage_custom_value",
+													"value": "16363767.331483945",
+													"description": "Required if leverage_type = 'custom'"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/ai",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												"ai"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "post Ver1Grid Bots Manual",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "account_id",
+											"value": "-33223707",
+											"description": "(Required) id from GET /ver1/accounts"
+										},
+										{
+											"key": "pair",
+											"value": "magna deserunt",
+											"description": "(Required) "
+										},
+										{
+											"key": "upper_price",
+											"value": "-13721536.7291065",
+											"description": "(Required) "
+										},
+										{
+											"key": "lower_price",
+											"value": "-98151853.64677572",
+											"description": "(Required) "
+										},
+										{
+											"key": "quantity_per_grid",
+											"value": "-78923201.37576857",
+											"description": "(Required) "
+										},
+										{
+											"key": "grids_quantity",
+											"value": "3314587.9539548457",
+											"description": "(Required) "
+										},
+										{
+											"key": "leverage_type",
+											"value": "not_specified",
+											"description": "Leverage type for futures accounts"
+										},
+										{
+											"key": "leverage_custom_value",
+											"value": "36099815.06521547",
+											"description": "Required if leverage_type = 'custom'"
+										},
+										{
+											"key": "is_enabled",
+											"value": "true",
+											"description": "Turn on or off grid_bot after creation"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/grid_bots/manual",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"grid_bots",
+										"manual"
+									]
+								},
+								"description": "Create Grid Bot (Permission: BOTS_WRITE, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Create Grid Bot (Permission: BOTS_WRITE, Security: SIGNED)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "account_id",
+													"value": "-33223707",
+													"description": "(Required) id from GET /ver1/accounts"
+												},
+												{
+													"key": "pair",
+													"value": "magna deserunt",
+													"description": "(Required) "
+												},
+												{
+													"key": "upper_price",
+													"value": "-13721536.7291065",
+													"description": "(Required) "
+												},
+												{
+													"key": "lower_price",
+													"value": "-98151853.64677572",
+													"description": "(Required) "
+												},
+												{
+													"key": "quantity_per_grid",
+													"value": "-78923201.37576857",
+													"description": "(Required) "
+												},
+												{
+													"key": "grids_quantity",
+													"value": "3314587.9539548457",
+													"description": "(Required) "
+												},
+												{
+													"key": "leverage_type",
+													"value": "not_specified",
+													"description": "Leverage type for futures accounts"
+												},
+												{
+													"key": "leverage_custom_value",
+													"value": "36099815.06521547",
+													"description": "Required if leverage_type = 'custom'"
+												},
+												{
+													"key": "is_enabled",
+													"value": "true",
+													"description": "Turn on or off grid_bot after creation"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/manual",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												"manual"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "get Ver1Grid Bots Ai Settings",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/grid_bots/ai_settings?pair=anim et irure&market_code=anim et irure",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"grid_bots",
+										"ai_settings"
+									],
+									"query": [
+										{
+											"key": "pair",
+											"value": "anim et irure",
+											"description": "(Required) "
+										},
+										{
+											"key": "market_code",
+											"value": "anim et irure",
+											"description": "(Required) Market code from /accounts/market_list"
+										}
+									]
+								},
+								"description": "Get AI settings (Permission: BOTS_READ, Security: SIGNED)"
+							},
+							"response": [
+								{
+									"name": "Get AI settings (Permission: BOTS_READ, Security: SIGNED)",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/ver1/grid_bots/ai_settings?pair=anim et irure&market_code=anim et irure",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"ver1",
+												"grid_bots",
+												"ai_settings"
+											],
+											"query": [
+												{
+													"key": "pair",
+													"value": "anim et irure"
+												},
+												{
+													"key": "market_code",
+													"value": "anim et irure"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "post Ver1Users Change Mode",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "mode",
+									"value": "real",
+									"description": "(Required) "
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/ver1/users/change_mode",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ver1",
+								"users",
+								"change_mode"
+							]
+						},
+						"description": "Change User Mode(Paper or Real) (Permission: ACCOUNTS_WRITE, Security: SIGNED)"
+					},
+					"response": [
+						{
+							"name": "Change User Mode(Paper or Real) (Permission: ACCOUNTS_WRITE, Security: SIGNED)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "mode",
+											"value": "real",
+											"description": "(Required) "
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/ver1/users/change_mode",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"users",
+										"change_mode"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "get Ver1Ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ver1/ping",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ver1",
+								"ping"
+							]
+						},
+						"description": "Test connectivity to the Rest API (Permission: NONE, Security: NONE)"
+					},
+					"response": [
+						{
+							"name": "Test connectivity to the Rest API (Permission: NONE, Security: NONE)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/ping",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"ping"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"pong\": \"'pong'\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get Ver1Time",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/ver1/time",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"ver1",
+								"time"
+							]
+						},
+						"description": "Test connectivity to the Rest API and get the current server time (Permission: NONE, Security: NONE)"
+					},
+					"response": [
+						{
+							"name": "Test connectivity to the Rest API and get the current server time (Permission: NONE, Security: NONE)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/ver1/time",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"ver1",
+										"time"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"server_time\": -54519244\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"hma_text = request.url;",
+					"if (pm.request.body != undefined){",
+					"    hma_text += pm.request.body;",
+					"}",
+					"",
+					"// variable injection is done after pre-request scripts. So we need to do it manually",
+					"hma_text = pm.environment.replaceIn(hma_text);",
+					"hma_text = pm.variables.replaceIn(hma_text);",
+					"hma_text = pm.collectionVariables.replaceIn(hma_text);",
+					"hma_text = pm.globals.replaceIn(hma_text);",
+					"",
+					"hma_text = hma_text.replace(\"https://api.3commas.io\", \"\");",
+					"",
+					"key = pm.environment.get('THREE_COMMAS_API_KEY');",
+					"secret = pm.environment.get('THREE_COMMAS_API_SECRET');",
+					"signature = CryptoJS.HmacSHA256(hma_text, secret).toString();",
+					"pm.request.headers.add({key: \"Signature\", value: signature});",
+					"pm.request.headers.add({key: \"APIKEY\", value: key});",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://api.3commas.io/public/api"
+		}
+	]
+}
