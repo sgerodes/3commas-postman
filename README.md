@@ -1,10 +1,9 @@
 # 3commas-postman
 
-A postman collection and environment created from the official swager doc. The signature is created automatically.
+A "Plug and Play" postman collection created from the official swagger doc. 
+The signature is created automatically.
 
-In order to use this collection you will need to create api key-secret pair in your 3 commas account and store it 
-in the variables THREE_COMMAS_API_KEY and THREE_COMMAS_API_SECRET. 
-The pre-request script will do everything else for you.
+You just need to add THREE_COMMAS_API_KEY and THREE_COMMAS_API_SECRET to the collection variables.
 
-Some requests require write permissions. which exactly can be found on the official repo:
+Some requests require write permissions. Which exactly can be found on the official repo:
 https://github.com/3commas-io/3commas-official-api-docs
