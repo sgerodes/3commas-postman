@@ -5,7 +5,7 @@
 // - Enjoy life
 
 hma_text = request.url;
-if (pm.request.body != undefined){
+if (pm.request.body !== undefined){
     hma_text += pm.request.body;
 }
 
