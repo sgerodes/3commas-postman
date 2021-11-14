@@ -24,3 +24,10 @@ if (!secret) throw new Error(`Must set collection var: THREE_COMMAS_API_SECRET, 
 signature = CryptoJS.HmacSHA256(hma_text, secret).toString();
 pm.request.headers.add({key: "Signature", value: signature});
 pm.request.headers.add({key: "APIKEY", value: key});
+
+// Forced mode
+if (request.url.includes("forced_mode=paper")){
+    pm.request.headers.add({key: "Forced-Mode", value: "paper"});
+} else if (request.url.includes("forced_mode=real")){
+    pm.request.headers.add({key: "Forced-Mode", value: "real"});
+}
