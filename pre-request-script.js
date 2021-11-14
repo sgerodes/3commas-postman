@@ -1,3 +1,9 @@
+// HOW TO USE
+// - Copy this script into you 3 commas postman collections "pre-request script"
+// - Add THREE_COMMAS_API_KEY and THREE_COMMAS_API_SECRET variables 
+// - The signature will be calculated for every request automatically.
+// - Enjoy life
+
 hma_text = request.url;
 if (pm.request.body != undefined){
     hma_text += pm.request.body;
