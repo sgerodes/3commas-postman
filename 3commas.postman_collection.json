@@ -1155,8 +1155,13 @@
 									}
 								],
 								"body": {
-									"mode": "urlencoded",
-									"urlencoded": []
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
 								},
 								"url": {
 									"raw": "{{baseUrl}}/ver1/bots/create_bot",
@@ -10820,12 +10825,15 @@
 					"pm.request.headers.add({key: \"APIKEY\", value: key});",
 					"",
 					"// Forced mode ",
-					"if (request.url.includes(\"forced_mode=paper\")){",
+					"forced_mode = pm.variables.get('FORCED_MODE');",
+					"if (forced_mode === \"paper\" || request.url.includes(\"forced_mode=paper\")){",
+					"    console.log(\"Forced-Mode set to paper\");",
 					"    pm.request.headers.add({key: \"Forced-Mode\", value: \"paper\"});",
-					"} else if (request.url.includes(\"forced_mode=real\")){",
+					"} else if (forced_mode === \"real\" || request.url.includes(\"forced_mode=real\")){",
+					"    console.log(\"Forced-Mode set to real\");",
 					"    pm.request.headers.add({key: \"Forced-Mode\", value: \"real\"});",
 					"} ",
-					"//pm.request.headers.add({key: \"Forced-Mode\", value: \"paper\"});"
+					""
 				]
 			}
 		},
@@ -10852,6 +10860,11 @@
 		{
 			"key": "THREE_COMMAS_API_SECRET",
 			"value": "",
+			"disabled": true
+		},
+		{
+			"key": "FORCED_MODE",
+			"value": "paper",
 			"disabled": true
 		}
 	]

@@ -26,8 +26,11 @@ pm.request.headers.add({key: "Signature", value: signature});
 pm.request.headers.add({key: "APIKEY", value: key});
 
 // Forced mode
-if (request.url.includes("forced_mode=paper")){
+forced_mode = pm.variables.get('FORCED_MODE');
+if (forced_mode === "paper" || request.url.includes("forced_mode=paper")){
+    console.log("Forced-Mode set to paper");
     pm.request.headers.add({key: "Forced-Mode", value: "paper"});
-} else if (request.url.includes("forced_mode=real")){
+} else if (forced_mode === "real" || request.url.includes("forced_mode=real")){
+    console.log("Forced-Mode set to real");
     pm.request.headers.add({key: "Forced-Mode", value: "real"});
 }

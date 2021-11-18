@@ -21,5 +21,5 @@ Just copy that code to your collection pre-request script.
 You will still need the THREE_COMMAS_API_KEY and THREE_COMMAS_API_SECRET variables in you environment.
 
 # Forced mode
-The script also allows you to enable the forced-mode header. You can add a forced mode parameter to your request.
-forced_mode=paper or forced_mode=real will add the needed header to your request.
+You can add a forced mode per request with a parameter: `forced_mode=paper` or `forced_mode=real` will add the needed header to your request.
+Or you can use the `FORCED_MODE` environment variable with the values `paper` or `real`. 
